@@ -1,0 +1,50 @@
+{
+  "main": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "Tools",
+      "url": "/tools"
+    },
+    {
+      "name": "Blog",
+      "url": "/blog"
+    },
+    {
+      "name": "Pricing",
+      "url": "/pricing"
+    },
+    {
+      "name": "Mission",
+      "url": "/mission"
+    },
+    {
+      "name": "About",
+      "url": "/about"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Privacy Policy",
+      "url": "/privacy"
+    },
+    {
+      "name": "Terms of Service",
+      "url": "/terms"
+    },
+    {
+      "name": "Cookie Policy",
+      "url": "/cookies"
+    },
+    {
+      "name": "GDPR",
+      "url": "/gdpr"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
+    }
+  ]
+}

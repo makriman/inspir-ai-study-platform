@@ -2,6 +2,9 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import chatRoutes from './routes/chat.js';
+import authRoutes from './routes/auth.js';
+import studentRoutes from './routes/student.js';
+import parentRoutes from './routes/parent.js';
 
 dotenv.config();
 
@@ -36,6 +39,9 @@ app.get('/health', (req, res) => {
 });
 
 // Routes
+app.use('/api/auth', authRoutes);
+app.use('/api/students', studentRoutes);
+app.use('/api/parents', parentRoutes);
 app.use('/api/chat', chatRoutes);
 
 // 404 handler

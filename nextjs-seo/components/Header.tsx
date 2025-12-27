@@ -47,7 +47,13 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-4">
             <ThemeSwitcher />
             <Link
-              href="/chat"
+              href="/login"
+              className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-inspir-purple font-semibold transition-colors"
+            >
+              Login
+            </Link>
+            <Link
+              href="/signup"
               className="px-6 py-2.5 bg-gradient-to-r from-inspir-purple to-inspir-blue text-white font-bold rounded-lg hover:scale-105 transition-transform shadow-md"
             >
               Start Free Trial

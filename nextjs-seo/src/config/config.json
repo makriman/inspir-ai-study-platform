@@ -1,0 +1,59 @@
+{
+  "site": {
+    "title": "inspir - AI-Powered Study Platform",
+    "base_url": "https://inspir.uk",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/favicon.png",
+    "logo": "",
+    "logo_darkmode": "",
+    "logo_width": "150",
+    "logo_height": "40",
+    "logo_text": "inspir"
+  },
+
+  "settings": {
+    "search": false,
+    "searchable_folders": ["blog"],
+    "sticky_header": true,
+    "theme_switcher": true,
+    "default_theme": "light",
+    "pagination": 12,
+    "summary_length": 200,
+    "blog_folder": "blog"
+  },
+
+  "announcement": {
+    "enable": false,
+    "content": "",
+    "expire_days": 7
+  },
+
+  "params": {
+    "contact_form_action": "#",
+    "copyright": "© 2025 inspir. All rights reserved."
+  },
+
+  "navigation_button": {
+    "enable": true,
+    "label": "Start Learning",
+    "link": "/chat"
+  },
+
+  "google_tag_manager": {
+    "enable": false,
+    "gtm_id": "GTM-XXXXXX"
+  },
+
+  "disqus": {
+    "enable": false,
+    "shortname": "",
+    "settings": {}
+  },
+
+  "metadata": {
+    "meta_author": "inspir",
+    "meta_image": "/og-image.jpg",
+    "meta_description": "Revolutionary AI study platform powered by Claude Sonnet 4.5. Features 15 study tools, AI tutoring, and personalized learning."
+  }
+}

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://inspir.uk
+
+# Sitemaps
+Sitemap: https://inspir.uk/sitemap.xml
