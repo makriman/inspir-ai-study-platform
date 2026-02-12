@@ -17,9 +17,13 @@ dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Environment files
+# Environment files - NEVER commit these!
 .env
+.env.*
+!.env.example
 .env.local
 .env.development.local
 .env.test.local
@@ -31,6 +35,7 @@ yarn-error.log*
 # PM2
 .pm2/
 logs/
+*.log
 
 # IDEs
 .vscode/
@@ -54,3 +59,11 @@ Thumbs.db
 .claude
 .claude.json
 .claude.json.backup
+
+# Git credentials - NEVER commit these!
+.git-credentials
+*.token
+
+# Backup files
+*-backup/
+*.backup
