@@ -5,14 +5,22 @@ const { Client } = pg;
 
 // Supabase connection details
 // Format: postgresql://postgres:[PASSWORD]@db.[PROJECT_REF].supabase.co:5432/postgres
+import 'dotenv/config';
+
 const PROJECT_REF = 'ksdnbkxixbywurohugkx';
+const DB_PASSWORD = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+if (!DB_PASSWORD) {
+  console.error('❌ Error: SUPABASE_SERVICE_ROLE_KEY environment variable is required.');
+  process.exit(1);
+}
 
 // Try different connection approaches
 const connectionStrings = [
   // Try with service role key as password (sometimes works)
-  `postgresql://postgres:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtzZG5ia3hpeGJ5d3Vyb2h1Z2t4Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NjE0NDQ5NywiZXhwIjoyMDgxNzIwNDk3fQ.wPsceDO3tTGXacwBipTYIMsmBD2W4ZHXjjDZk_pQ5NY@db.${PROJECT_REF}.supabase.co:5432/postgres`,
+  `postgresql://postgres:${DB_PASSWORD}@db.${PROJECT_REF}.supabase.co:5432/postgres`,
   // Try pooler connection
-  `postgresql://postgres:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtzZG5ia3hpeGJ5d3Vyb2h1Z2t4Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NjE0NDQ5NywiZXhwIjoyMDgxNzIwNDk3fQ.wPsceDO3tTGXacwBipTYIMsmBD2W4ZHXjjDZk_pQ5NY@aws-0-eu-west-2.pooler.supabase.com:5432/postgres`
+  `postgresql://postgres:${DB_PASSWORD}@aws-0-eu-west-2.pooler.supabase.com:5432/postgres`
 ];
 
 async function tryConnection(connectionString, index) {
